@@ -133,6 +133,12 @@ ul li::before {
   .container { display: flex; margin: 10px;}
 }
 
+@media (min-width: 280px) and (max-width: 592px) {
+  .nav {
+    margin: 0;
+  }
+}
+
 /* Screen larger than 900px? 3 columns */
 @media (min-width: 900px) {
   .cards { grid-template-columns: repeat(4, 1fr); width: 1200px;}
