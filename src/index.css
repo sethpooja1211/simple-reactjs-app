@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+  background: #e6e9ea;
+}
+
+.card {
+  background-color: #fff;
+  color: black;
+  border: 1px solid #c4c0c091;
+    border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  height: 100%;
+  max-height: 500px;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.detail_view {
+  text-align: left;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+.icon {
+  background: #e6e9ea;
+  margin: 1rem;
+}
+
+.icon img {
+  width: 100%;
+}
+
+.title_color {
+  color:#23417d;
+}
+
+.filter_icon {
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #333;
+    background-color: rgb(255, 255, 255);
+    margin:15px 20px 0 0;
+    background-color: rgb(178 241 185);
+}
+
+.nav {
+    background: #fff;
+    margin: 1px 10px 0 0;
+    text-align: left;
+    padding: 10px;
+    border-radius: 7px;
+    max-height: 700px;
+}
+
+.title_heading {
+  margin: 0 10px;
+  text-align: left;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.filter_heading {
+  text-align: center;
+  font-size: 14px;
+  color: #8b8e92;
+  font-weight: normal;
+  box-shadow: 0px 1px 0px rgb(0 0 0 / 22%);
+}
+
+.filt_layout {
+  text-align: center;
+  width:200px;
+}
+
+.crd_textR {
+  font-weight: 100;
+  color: #b0b2b5;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: rgb(10, 10, 10);
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+.crd_sr {
+  display: flex;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 320px) and (max-width: 992px) {
+  .filt_layout {
+    margin: 0 auto;
+  }
+  .icon img {
+    width: 50%;
+ }
+ .title_heading {
+  font-size: 23px;
+ }
+}
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); margin: 0 auto; }
+  .container { display: flex; margin: 10px;}
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(4, 1fr); width: 1200px;}
+}
